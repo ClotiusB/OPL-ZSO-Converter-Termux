@@ -27,15 +27,25 @@ pkg update -y
 pkg upgrade -y
 ```
 
+### Initial Termux Configuration
+
+Grant Termux access to internal storage:
+```bash
+termux-setup-storage
+```
+This will prompt you to allow Termux access to your device's internal storage. You must accept this to access `/sdcard/Download`.
+
+Install Python 3 and pip:
+```bash
+pkg install python python-pip -y
+```
+
+### Clone and Setup Repository
+
 Clone this repository and navigate into it:
 ```bash
 git clone https://github.com/ClotiusB/OPL-ZSO-Converter-Termux.git
 cd OPL-ZSO-Converter-Termux
-```
-
-Install required packages:
-```bash
-pkg install python git -y
 ```
 
 Install the LZ4 dependency:
@@ -47,6 +57,7 @@ Clone Open PS2 Loader (required for `ziso.py`):
 ```bash
 git clone https://github.com/ps2homebrew/Open-PS2-Loader.git
 ```
+
 ## Directory Structure
 
 Place your ISO files in:
