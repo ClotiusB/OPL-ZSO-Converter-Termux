@@ -27,6 +27,12 @@ pkg update -y
 pkg upgrade -y
 ```
 
+Clone this repository and navigate into it:
+```bash
+git clone https://github.com
+cd OPL-ZSO-Converter-Termux
+```
+
 Install required packages:
 ```bash
 pkg install python git -y
@@ -37,11 +43,10 @@ Install the LZ4 dependency:
 pip install lz4
 ```
 
-Clone Open PS2 Loader:
+Clone Open PS2 Loader (required for `ziso.py`):
 ```bash
 git clone https://github.com/ps2homebrew/Open-PS2-Loader.git
 ```
-
 ## Directory Structure
 
 Place your ISO files in:
