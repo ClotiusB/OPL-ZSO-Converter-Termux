@@ -29,7 +29,7 @@ pkg upgrade -y
 
 Clone this repository and navigate into it:
 ```bash
-git clone https://github.com
+git clone https://github.com/ClotiusB/OPL-ZSO-Converter-Termux.git
 cd OPL-ZSO-Converter-Termux
 ```
 
