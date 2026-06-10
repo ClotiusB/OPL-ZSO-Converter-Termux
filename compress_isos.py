@@ -14,6 +14,24 @@ ZISO = "/data/data/com.termux/files/home/Open-PS2-Loader/pc/ziso.py"
 COMP_LEVEL = "2"
 
 
+def get_user_preference():
+    """Ask user if they want to keep or remove ISO files after compression."""
+    while True:
+        print("\n===== ISO HANDLING PREFERENCE =====")
+        print("1. Keep ISO files after compression")
+        print("2. Remove ISO files after compression")
+        print("====================================")
+        
+        choice = input("Select an option (1 or 2): ").strip()
+        
+        if choice == "1":
+            return True  # Keep ISO files
+        elif choice == "2":
+            return False  # Remove ISO files
+        else:
+            print("[ERROR] Invalid choice. Please enter 1 or 2.")
+
+
 def main():
     ZSO_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -26,6 +44,8 @@ def main():
     if not iso_files:
         print("[INFO] No ISO files found.")
         return
+
+    keep_isos = get_user_preference()
 
     total_files = len(iso_files)
     converted_files = 0
@@ -65,8 +85,11 @@ def main():
             shutil.move(str(temp_zso), str(final_zso))
             print(f"[OK] Moved to: {final_zso}")
 
-            iso_file.unlink()
-            print(f"[OK] Deleted source ISO: {iso_file.name}")
+            if keep_isos:
+                print(f"[OK] Kept source ISO: {iso_file.name}")
+            else:
+                iso_file.unlink()
+                print(f"[OK] Deleted source ISO: {iso_file.name}")
 
             converted_files += 1
 
@@ -77,6 +100,7 @@ def main():
     print(f"ISO files found : {total_files}")
     print(f"Converted       : {converted_files}")
     print(f"Failed/Skipped  : {total_files - converted_files}")
+    print(f"ISO files       : {'Kept' if keep_isos else 'Removed'}")
 
 
 if __name__ == "__main__":
