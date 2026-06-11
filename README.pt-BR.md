@@ -52,6 +52,13 @@ Instale Python 3 e pip:
 pkg install python python-pip -y
 ```
 
+### Clone o Open PS2 Loader (necessário para ziso.py)
+
+Clone o Open PS2 Loader primeiro:
+```bash
+git clone https://github.com/ps2homebrew/Open-PS2-Loader.git
+```
+
 ### Clone e Configure o Repositório
 
 Clone este repositório e navegue até ele:
@@ -63,11 +70,6 @@ cd OPL-ZSO-Converter-Termux
 Instale a dependência LZ4:
 ```bash
 pip install lz4
-```
-
-Clone o Open PS2 Loader (necessário para `ziso.py`):
-```bash
-git clone https://github.com/ps2homebrew/Open-PS2-Loader.git
 ```
 
 ## Estrutura de Diretórios
