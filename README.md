@@ -7,7 +7,7 @@ Convert PlayStation 2 ISO files to ZSO format directly on Android using Termux a
 * Batch conversion of ISO files to ZSO.
 * Automatically creates the output directory.
 * Moves converted ZSO files to the destination folder.
-* Deletes original ISO files after successful conversion.
+* **Choose whether to keep or delete original ISO files** after successful conversion.
 * Skips files that have already been converted.
 * Simple and lightweight.
 
@@ -111,34 +111,43 @@ python compress_isos.py
 ```
 
 ### What Happens
-For every ISO file found:
+
+The script will ask you two things:
+
+1. **Language Selection**: Choose between Portuguese (Brazil) or English (American)
+2. **ISO Handling Preference**: 
+   - Keep ISO files after compression
+   - Remove ISO files after compression
+
+After making your choices, for every ISO file found:
 1. The ISO is compressed into ZSO format.
 2. The generated file is verified.
 3. The ZSO file is moved to `/sdcard/Download/Zso`.
-4. The original ISO is deleted.
+4. Based on your preference, the original ISO is either kept or deleted.
 5. The next ISO is processed.
 
 ### Example Output
 ```text
 [1/3] Processing: God of War.iso
-[OK] Moved to: /sdcard/Download/Zso/God of War.zso
-[OK] Deleted source ISO: God of War.iso
+[OK] File moved successfully.
+[OK] ISO kept
 
 [2/3] Processing: Gran Turismo 4.iso
-[OK] Moved to: /sdcard/Download/Zso/Gran Turismo 4.zso
-[OK] Deleted source ISO: Gran Turismo 4.iso
+[OK] File moved successfully.
+[OK] ISO deleted
 
 ===== SUMMARY =====
 ISO files found : 3
-Converted       : 3
+Successfully converted : 3
 Failed/Skipped  : 0
+ISO files: Kept
 ```
 
-## Warning
+## Notes
 
-> ⚠️ **Original ISO files are permanently deleted after successful conversion.**
+> ℹ️ **You control what happens to your ISO files.**
 > 
-> Make sure your ZSO files are working correctly before removing any backups.
+> Before starting compression, choose whether to keep or delete your ISO files. This preference will be applied to all files in the batch.
 
 ## Compatibility
 
