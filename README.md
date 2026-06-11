@@ -27,6 +27,18 @@ pkg update -y
 pkg upgrade -y
 ```
 
+### Install Git
+
+Install Git package:
+```bash
+pkg install git -y
+```
+
+Verify Git installation:
+```bash
+git --version
+```
+
 ### Initial Termux Configuration
 
 Grant Termux access to internal storage:
