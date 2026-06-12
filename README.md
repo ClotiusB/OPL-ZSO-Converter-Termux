@@ -159,4 +159,4 @@ ISO files: Kept
 
 ## License
 
-MIT License
+[MIT License](https://github.com/ClotiusB/OPL-ZSO-Converter-Termux?tab=MIT-1-ov-file#)
