@@ -56,7 +56,7 @@ pkg install python python-pip -y
 
 Clone Open PS2 Loader first:
 ```bash
-git clone https://github.com/ps2homebrew/Open-PS2-Loader.git
+git clone https://github.com/ClotiusB/Open-PS2-Loader.git
 ```
 
 ### Clone and Setup Repository
