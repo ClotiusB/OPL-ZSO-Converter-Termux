@@ -159,4 +159,4 @@ Arquivos ISO             : Mantidos
 
 ## Licença
 
-[Licença MIT](https://en.wikipedia.org/wiki/MIT_License)
+[MIT License](https://github.com/ClotiusB/OPL-ZSO-Converter-Termux?tab=MIT-1-ov-file#)
